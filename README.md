@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Adidas E-Commerce
+
+A modern, responsive e-commerce web application inspired by Adidas, built with Next.js 15 (App Router), React, and Tailwind CSS.  
+This project features a stylish shopping experience with cart management, checkout flow, product browsing, and AI-powered chatbot support.
+
+![Screenshot 2025-06-24 143109](https://github.com/user-attachments/assets/01d6defb-3fc8-474c-9ac7-498d208e8a57)
+![Screenshot 2025-06-24 142816](https://github.com/user-attachments/assets/7a4b7bc3-4cfa-4148-9c5d-abf796415e22)
+![Screenshot 2025-06-24 142857](https://github.com/user-attachments/assets/c4866f4a-c506-413a-8f5e-2790197d13c3)
+![Screenshot 2025-06-24 142931](https://github.com/user-attachments/assets/61913fea-25a2-4e24-b68f-24014ab55f20)
+![Screenshot 2025-06-24 143013](https://github.com/user-attachments/assets/98333874-ebff-442e-b111-f358700d7030)
+![image](https://github.com/user-attachments/assets/a2a9f966-2a27-478e-b732-acb954eb6c2f)
+
+
+---
+
+## Features
+
+- Modern Adidas-inspired UI/UX
+- Product listing, detail, and category pages
+- Persistent shopping cart with quantity and size selection
+- Order summary with subtotal, shipping, tax, and total
+- Remove and update cart items
+- "Add More" button to continue shopping
+- Responsive design for all devices
+- AI-powered chatbot for customer support
+- User authentication (if enabled)
+- Account management dashboard
+- Checkout form (UI only)
+- Tailwind CSS for rapid styling
+
+---
+
+## Technologies Used
+
+- Next.js 15 (App Router)
+- React 18
+- Tailwind CSS
+- Context API for cart state management
+- Modern JavaScript (ES6+)
+- In-Build AI ChatBot
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v16 or higher)
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/ryuvanraj/adidas-clone.git
+    cd adidas-clone
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-## Learn More
+3. **Start the development server**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Open your browser**
+    - Visit [http://localhost:3000](http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+- Browse products by category or featured section
+- Click on a product to view details and select size
+- Add products to your cart
+- Adjust quantity or remove items in the cart page
+- Click "Add More" to return to the main page and shop more
+- Proceed to checkout (UI only)
+- Use the chatbot for help or FAQs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- Adidas for design inspiration
+- Next.js and Vercel for the framework
+- Tailwind CSS for utility-first styling
+
+---
+
+## Contact
+
+**E-Mail:** [yuvan.r2005@gmail.com](mailto:yuvan.r2005@gmail.com)  
+**GitHub:** [ryuvanraj](https://github.com/ryuvanraj)
