@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { use } from "react";
-import { menProducts, womenProducts, kidsProducts, newProducts, saleProducts } from "@/data/products";
+import { menProducts, womenProducts, kidsProducts, newProducts, saleProducts , featuredProducts } from "@/data/products";
 
 export default function ProductPage({ params }) {
   const unwrappedParams = use(params);
@@ -15,7 +15,7 @@ export default function ProductPage({ params }) {
 
   // Combine all products into one array and remove duplicates by ID
   const allProducts = [...new Map(
-    [...menProducts, ...womenProducts, ...kidsProducts, ...newProducts, ...saleProducts]
+    [...menProducts, ...womenProducts, ...kidsProducts, ...newProducts, ...saleProducts, ...featuredProducts]
     .map(product => [product.id, product])
   ).values()];
 
@@ -44,10 +44,14 @@ export default function ProductPage({ params }) {
       return;
     }
 
+    const numericPrice = typeof product.price === "string"
+      ? Number(product.price.replace(/[^0-9.]/g, ""))
+      : product.price;
+
     const cartItem = {
       id: product.id,
       name: product.name,
-      price: product.salePrice || product.price,
+      price: numericPrice,
       image: product.image,
       size: selectedSize,
       originalPrice: product.originalPrice,

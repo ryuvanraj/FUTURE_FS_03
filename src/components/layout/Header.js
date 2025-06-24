@@ -6,10 +6,15 @@ import Image from 'next/image';
 import { ShoppingBagIcon, UserIcon, MagnifyingGlassIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import MobileMenu from './MobileMenu';
 import { useCart } from '@/context/CartContext';
+import { signOut } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { cartItems } = useCart(); // Changed from cart to cartItems
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const { cartItems } = useCart();
+  const { user } = useAuth();
 
   const navigation = [
     { name: 'New & Featured', href: '/new' },
@@ -54,21 +59,39 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 relative">
             <button className="p-2 hover:bg-gray-800 rounded-full text-white">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
             <Link href="/cart" className="p-2 hover:bg-gray-800 rounded-full text-white relative">
               <ShoppingBagIcon className="h-6 w-6" />
-              {cartItems.length > 0 && ( // Changed from cart.length to cartItems.length
+              {cartItems.length > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {cartItems.length}
                 </span>
               )}
             </Link>
-            <Link href="/account" className="p-2 hover:bg-gray-800 rounded-full text-white">
-              <UserIcon className="h-6 w-6" />
-            </Link>
+            <div className="relative">
+              <button
+                className="p-2 hover:bg-gray-800 rounded-full text-white cursor-pointer"
+                onClick={() => setShowUserMenu((prev) => !prev)}
+              >
+                <UserIcon className="h-6 w-6" />
+              </button>
+              {showUserMenu && user && (
+                <div className="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow-lg z-50">
+                  <button
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    onClick={async () => {
+                      await signOut(auth);
+                      setShowUserMenu(false);
+                    }}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>

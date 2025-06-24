@@ -83,7 +83,7 @@ export default function SalePage() {
               className={`px-4 py-2 rounded-full whitespace-nowrap ${
                 selectedCategory === category
                   ? "bg-red-600 text-white"
-                  : "bg-gray-100 hover:bg-gray-200"
+                  : "bg-black hover:bg-black/80 text-white cursor-pointer"
               }`}
             >
               {category === "all" ? "All Sales" : category}

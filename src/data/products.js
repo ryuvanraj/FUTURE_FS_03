@@ -437,3 +437,27 @@ export const newProducts = [
     image: "/images/products/kids/shoes/product-3.jpeg"
   }
 ];
+
+export const featuredProducts = [
+	{
+		id: 'featured-1',
+		name: "Adidas Air Max Pulse",
+		price: "$150",
+		image: "/images/products/Adidas-Air-Max-Pulse.jpg",
+		category: "Running Shoes",
+	},
+	{
+		id: 'featured-2',
+		name: "Adidas Dri-FIT Running",
+		price: "$75",
+		image: "/images/products/Adidas-Dri-FIT-Running-Athletic-Wear.jpg",
+		category: "Athletic Wear",
+	},
+	{
+		id: 'featured-3',
+		name: "Adidas Adizero Aruku",
+		price: "$140",
+		image: "/images/products/Adidas-Adizero-Aruku.jpg",
+		category: "Running Shoes",
+	},
+];
