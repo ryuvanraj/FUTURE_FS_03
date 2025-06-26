@@ -71,7 +71,7 @@ This project features a stylish shopping experience with cart management, checko
     ```
 
 4. **Open your browser**
-    - Visit [http://localhost:3000](http://localhost:3000)
+    - Visit [https://adidaspro.netlify.app/](https://adidaspro.netlify.app/)
 
 ---
 
